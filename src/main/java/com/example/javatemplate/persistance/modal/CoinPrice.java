@@ -27,4 +27,5 @@ public class CoinPrice {
 
     @Column(name = "updated_at")
     private Date updatedAt;
+
 }

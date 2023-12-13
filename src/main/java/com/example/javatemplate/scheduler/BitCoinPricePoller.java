@@ -15,7 +15,7 @@ public class BitCoinPricePoller {
     @Autowired
     DataService dataService;
 
-    @Scheduled(fixedRate = 600000)
+    @Scheduled(fixedRate = 6000)
     public void coinDeskPricePoller()  {
         boolean fetchSuccess = dataService.fetchAndPersistCoinPrice();
         log.info("Coin price fetch success={}", fetchSuccess);
