@@ -83,7 +83,9 @@ public class DataService {
     private void buildAndPersistPrice(BitCoinPriceResponse coinPriceResponse) {
         CoinPrice coinPrice = new CoinPrice();
         PriceAnalysis priceAnalysis = new PriceAnalysis();
-        Date updatedAt = new Date();
+        LocalDateTime now = LocalDateTime.now();
+        Date updatedAt = Date.from(now.atZone(ZoneId.of("Asia/Kolkata")).toInstant());
+
         BitCoinPriceResponse.Bpi bpi = coinPriceResponse.getBpi();
         Double usdRate = bpi.getUSD().getRateFloat();
         Double gbpRate = bpi.getGBP().getRateFloat() * (1 / 0.75);
