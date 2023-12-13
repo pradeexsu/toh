@@ -5,8 +5,10 @@ import lombok.Data;
 
 @Data
 @Builder
-public class UserDto {
-    String name;
-    String email;
-    String age;
+public class CoinPriceDto {
+	Double usdRate;
+	Double gbpRate;
+	Double eurRate;
+	String updatedAt;
 }
+

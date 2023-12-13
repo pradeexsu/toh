@@ -7,6 +7,7 @@ import java.util.List;
 
 @Data
 @Builder
-public class UserResponse {
-    List<UserDto> userList;
+public class CoinPriceData {
+    List<CoinPriceDto> coinPriceList;
 }
+
